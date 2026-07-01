@@ -21,6 +21,8 @@ const db = getFirestore(app);
 async function loadToolsFromFirebase() {
   const querySnapshot = await getDocs(collection(db, "Tool"));
 
+  console.log(querySnapshot.size);
+
   aiTools.length = 0;
 
   querySnapshot.forEach((doc) => {
