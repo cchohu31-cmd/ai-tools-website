@@ -39,11 +39,8 @@ async function loadToolsFromFirebase() {
 }
 
 // Sample AI Tools Data
-const aiTools = [
-   ...
-];
 
-loadToolsFromFirebase();
+const aiTools = [
     { name: "ChatGPT", category: "text", desc: "Advanced conversational AI for writing, coding, and analysis.", icon: "fa-robot" },
     { name: "Midjourney", category: "image", desc: "High-quality artistic image generation from text prompts.", icon: "fa-paint-brush" },
     { name: "GitHub Copilot", category: "code", desc: "AI pair programmer that helps you write code faster.", icon: "fa-code" },
@@ -55,6 +52,8 @@ loadToolsFromFirebase();
     { name: "Stable Diffusion", category: "image", desc: "Open-source image generation model for local or cloud use.", icon: "fa-wand-magic-sparkles" },
     { name: "Cursor", category: "code", desc: "AI-first code editor built for pair programming with AI.", icon: "fa-terminal" }
 ];
+
+loadToolsFromFirebase();
 
 // Load Tool Cards
 const toolsGrid = document.getElementById('tools-grid');
