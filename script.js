@@ -37,9 +37,13 @@ async function loadToolsFromFirebase() {
 
   displayTools(aiTools);
 }
-loadToolsFromFirebase();
+
 // Sample AI Tools Data
 const aiTools = [
+   ...
+];
+
+loadToolsFromFirebase();
     { name: "ChatGPT", category: "text", desc: "Advanced conversational AI for writing, coding, and analysis.", icon: "fa-robot" },
     { name: "Midjourney", category: "image", desc: "High-quality artistic image generation from text prompts.", icon: "fa-paint-brush" },
     { name: "GitHub Copilot", category: "code", desc: "AI pair programmer that helps you write code faster.", icon: "fa-code" },
