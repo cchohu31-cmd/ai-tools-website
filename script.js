@@ -71,7 +71,7 @@ function displayTools(tools) {
 }
 
 // Initial Display
-displayTools(aiTools);
+loadToolsFromFirebase();
 
 // Search Functionality
 const searchInput = document.getElementById('tool-search');
@@ -81,7 +81,6 @@ searchInput.addEventListener('input', (e) => {
         tool.name.toLowerCase().includes(searchTerm) || 
         tool.desc.toLowerCase().includes(searchTerm)
     );
-    loadToolsFromFirebase();
 });
 
 // Category Filtering
