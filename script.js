@@ -53,8 +53,6 @@ const aiTools = [
     { name: "Cursor", category: "code", desc: "AI-first code editor built for pair programming with AI.", icon: "fa-terminal" }
 ];
 
-loadToolsFromFirebase();
-
 // Load Tool Cards
 const toolsGrid = document.getElementById('tools-grid');
 
