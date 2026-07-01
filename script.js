@@ -36,7 +36,7 @@ async function loadToolsFromFirebase() {
   });
 
   displayTools(aiTools);
-}
+} loadToolsFromFirebase();
 
 loadToolsFromFirebase();
 // Sample AI Tools Data
