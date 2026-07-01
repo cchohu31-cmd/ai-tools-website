@@ -17,6 +17,27 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+async function loadToolsFromFirebase() {
+  const querySnapshot = await getDocs(collection(db, "Tool"));
+
+  aiTools.length = 0;
+
+  querySnapshot.forEach((doc) => {
+    const tool = doc.data();
+
+    aiTools.push({
+      name: tool.name,
+      category: tool.Category.toLowerCase(),
+      desc: tool.Description,
+      website: tool.Website,
+      icon: "fa-robot"
+    });
+  });
+
+  displayTools(aiTools);
+}
+
+loadToolsFromFirebase();
 // Sample AI Tools Data
 const aiTools = [
     { name: "ChatGPT", category: "text", desc: "Advanced conversational AI for writing, coding, and analysis.", icon: "fa-robot" },
