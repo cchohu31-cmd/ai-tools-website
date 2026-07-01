@@ -17,6 +17,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+
 async function loadToolsFromFirebase() {
   const querySnapshot = await getDocs(collection(db, "Tool"));
 
@@ -80,7 +81,7 @@ searchInput.addEventListener('input', (e) => {
         tool.name.toLowerCase().includes(searchTerm) || 
         tool.desc.toLowerCase().includes(searchTerm)
     );
-    displayTools(filteredTools);
+    loadToolsFromFirebase();
 });
 
 // Category Filtering
